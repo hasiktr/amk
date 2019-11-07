@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSignal", "MvcSignal\MvcSignal.csproj", "{55B33B8C-9B57-4949-BB3B-CDBD84E442E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{6866158D-2EC5-483A-8CEF-DC59F3C1DB3C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "job_hunger_chrome-local", "job_hunger_chrome-local\", "{D5BFAFE7-B597-4F8A-831D-9D6E6C6692A3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_6015"
+		Debug.AspNetCompiler.PhysicalPath = "job_hunger_chrome-local\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_6015\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_6015"
+		Release.AspNetCompiler.PhysicalPath = "job_hunger_chrome-local\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_6015\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "6015"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "job_hunger_chrome-remote", "job_hunger_chrome-remote\", "{7CC67AF6-BE78-4919-ABF5-C4CD33CA7E8A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_6019"
+		Debug.AspNetCompiler.PhysicalPath = "job_hunger_chrome-remote\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_6019\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_6019"
+		Release.AspNetCompiler.PhysicalPath = "job_hunger_chrome-remote\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_6019\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "6019"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{005CAE99-5C27-4931-8188-7F5148E68FA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55B33B8C-9B57-4949-BB3B-CDBD84E442E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B33B8C-9B57-4949-BB3B-CDBD84E442E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B33B8C-9B57-4949-BB3B-CDBD84E442E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B33B8C-9B57-4949-BB3B-CDBD84E442E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5BFAFE7-B597-4F8A-831D-9D6E6C6692A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BFAFE7-B597-4F8A-831D-9D6E6C6692A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5BFAFE7-B597-4F8A-831D-9D6E6C6692A3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BFAFE7-B597-4F8A-831D-9D6E6C6692A3}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7CC67AF6-BE78-4919-ABF5-C4CD33CA7E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC67AF6-BE78-4919-ABF5-C4CD33CA7E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC67AF6-BE78-4919-ABF5-C4CD33CA7E8A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC67AF6-BE78-4919-ABF5-C4CD33CA7E8A}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55B33B8C-9B57-4949-BB3B-CDBD84E442E5} = {005CAE99-5C27-4931-8188-7F5148E68FA7}
+		{D5BFAFE7-B597-4F8A-831D-9D6E6C6692A3} = {6866158D-2EC5-483A-8CEF-DC59F3C1DB3C}
+		{7CC67AF6-BE78-4919-ABF5-C4CD33CA7E8A} = {6866158D-2EC5-483A-8CEF-DC59F3C1DB3C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59864855-B43D-4B19-AC2F-E2B91D9A73AF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Youtube Chat</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src *;">
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="/Scripts/jquery.signalR-2.0.1.min.js" type="text/javascript"></script> 
+	 
+    <!-- <script src="/signalr/hubs" type="text/javascript"></script> -->
+    <!-- <script src="http://localhost:5090/signalr/hubs"></script> -->
+</head>
+
+<body class="container"> 
+    <div id="showSignIn">
+        <h3>Youtube Chat</h3>
+        <div class="successText"> Enter nickname and chat with people watching this video!</div>
+        <div class="error">An error occured.Please contact with system administrator.</div>
+        <form method="post" class="form-group space spacedown">
+            <p>
+                <input type="text" name="login" value="" placeholder="Name" id="login-name" class="wide-input">
+            </p>
+            <div class="border"></div>
+            <br>
+            <p class="submit">
+                <input type="button" name="login" value="Login" id="login-post" class="special-button floatr">
+            </p>
+        </form>
+    </div>
+
+    <div id="jobForm" class="invisible"> 
+        <div class="success">Success - job was added to your Job Hunger dashboard!</div>
+        <div class="failure">Unable to create job. Please try again.</div>
+        <div id="username"> </div>
+        <form method="post" class="form-group">
+
+            <div class="row flex space">
+                <div class="col-sm-10">
+                    <input type="text" name="message" value="" placeholder="Type your message" id="message" class="wide-input">
+                </div>
+
+                <div class="col-sm-2">
+                    <p class="submit">
+                        <input type="button" name="commit" value="Send" id="send" class="special-button">
+                    </p>
+                </div>
+            </div>
+            <div class="border"></div>
+            <p>
+                <textarea name="Text1" cols="35" rows="15" readonly></textarea>
+            </p>
+            <div class="row">
+                <div class='col-xs-8'>
+                    <div class="successText">Total users in chat :
+                        <div id="user-count"> 2 </div>
+                    </div>
+                </div>
+                <div class='col-xs-4 button-container'>
+                    <button id="logout" class="special-button">Log Out</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

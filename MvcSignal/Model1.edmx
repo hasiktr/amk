@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Conversation">
+          <Key>
+            <PropertyRef Name="ConID" />
+          </Key>
+          <Property Name="ConID" Type="int" Nullable="false" />
+          <Property Name="ConnectionIDUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ConnectionIDAdmin" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="Msg" Type="ntext" />
+          <Property Name="StartTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="EndTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="MsgDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="MsgDuration" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="AdminID" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdminCode" Type="int" />
+        </EntityType>
+        <EntityContainer Name="TestModelStoreContainer">
+          <EntitySet Name="tbl_Conversation" EntityType="Self.tbl_Conversation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_User" EntityType="Self.tbl_User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TestEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Conversation" EntityType="TestModel.tbl_Conversation" />
+          <EntitySet Name="tbl_User" EntityType="TestModel.tbl_User" />
+        </EntityContainer>
+        <EntityType Name="tbl_Conversation">
+          <Key>
+            <PropertyRef Name="ConID" />
+          </Key>
+          <Property Name="ConID" Type="Int32" Nullable="false" />
+          <Property Name="ConnectionIDUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ConnectionIDAdmin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Msg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StartTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EndTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MsgDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MsgDuration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="AdminID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AdminCode" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestModelStoreContainer" CdmEntityContainer="TestEntities">
+          <EntitySetMapping Name="tbl_Conversation">
+            <EntityTypeMapping TypeName="TestModel.tbl_Conversation">
+              <MappingFragment StoreEntitySet="tbl_Conversation">
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="MsgDuration" ColumnName="MsgDuration" />
+                <ScalarProperty Name="MsgDate" ColumnName="MsgDate" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="Msg" ColumnName="Msg" />
+                <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+                <ScalarProperty Name="ConnectionIDAdmin" ColumnName="ConnectionIDAdmin" />
+                <ScalarProperty Name="ConnectionIDUser" ColumnName="ConnectionIDUser" />
+                <ScalarProperty Name="ConID" ColumnName="ConID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_User">
+            <EntityTypeMapping TypeName="TestModel.tbl_User">
+              <MappingFragment StoreEntitySet="tbl_User">
+                <ScalarProperty Name="AdminCode" ColumnName="AdminCode" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

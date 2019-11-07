@@ -1,0 +1,101 @@
+body {
+  width: 300px;
+  background-color: rgba(255,245,245,1);
+}
+
+.invisible {
+  display: none;
+}
+
+.wide-input {
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  width: 100%;
+  font-size: 16px;
+  margin-top:5px;
+}
+
+.floatr { 
+	    float: right;
+    margin-bottom: 18px; 
+}
+
+.button-container {
+  /* padding-top: 20px; */
+  position: relative;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 15px;
+}
+
+textarea {
+  resize: vertical;
+  margin-top:15px;
+  background-color: cornsilk;
+}
+
+.special-button {
+  opacity: 1;
+  font-size: 16px;
+  display: block;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+  color: #F88;
+  border-radius: 5px;
+  padding: 0px;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 10px transparent;
+}
+
+.special-button:hover {
+  padding: 10px;
+  margin: -10px;
+  background-color: rgba(255,255,255,0.8);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+}
+
+.flex {
+display: flex;
+}
+
+.space {
+	margin-top:15px;
+}
+
+.spacedown {
+ margin-bottom: 40px;
+	
+}
+
+
+.border {
+  opacity: 1; 
+  display: block;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.successText {
+	  font-size: 16px;
+  color: #F88;
+  display: flex;
+}
+
+.error, .success, .failure {
+  display: none;
+  font-size: 16px;
+  color: #F88;
+}
+
+.link {
+  font-size: 16px;
+  color: #F88;
+}
